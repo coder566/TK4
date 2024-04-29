@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата покупки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 align="center">Оплата покупки</h1>
+        <form id="paymentForm" onsubmit="validatePayment(event)">
+            <label for="cardNumber">Номер карты: </label>
+            <input type="text" id="cardNumber" name="cardNumber" pattern="\d{16}" title="Введите 16 цифр номера карты без пробелов"> <br>
+            <label for="cardHolderName">Имя держателя: </label>
+            <input type="text" id="cardHolderName" name="cardHolderName"> <br>
+            <label for="expiryDate">Срок действия: </label>
+            <input type="text" id="Date" name="Date" placeholder="ММ/ГГ"> <br>
+            <label for="cardType">Тип карты: </label>
+            <select id="cardType" name="cardType">
+                <option value="visa">Visa</option>
+                <option value="mastercard">MasterCard</option>
+                <option value="unionpay">UnionPay</option>
+            </select> <br>
+            <button type="submit" id="btn">Оплатить</button>
+            <p id="errorMessages"></p>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
